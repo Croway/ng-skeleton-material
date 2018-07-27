@@ -1,35 +1,12 @@
-.docs-component-viewer-nav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 25px;
+.sidenav-container {
+  height: 100%;
 }
 
-.docs-component-viewer-nav .docs-component-viewer-nav-content {
-  margin: 25px;
-  width: 240px;
-  max-height: 75vh;
-  overflow: auto;
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
 }
 
-.docs-component-viewer-nav-content {
-  background: rgba(0,0,0,.03);
-}
-
-.docs-component-viewer-nav .docs-component-viewer-nav-content button {
-  padding: 10px 15px;
-  font-weight: 700;
-  line-height: 16px;
-  margin: 0;
-  font-size: 13px;
-  cursor: pointer;
-  position: relative;
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: 0 0;
-  border: none;
-}
-
-.menu-margin {
-  padding: 10px 10px 10px 10px;
+.content-margin {
+  padding: 20px 20px 20px 20px;
 }

@@ -1,7 +1,5 @@
 <mat-toolbar color="primary">
-  <span class="margin-right-20">
-    HEADER
-  </span>
+  <mat-icon (click)="drawer.toggle()" class="margin-right-20 pointer">menu</mat-icon>
   <button [routerLink]="'home'" mat-button [routerLinkActive]="'mat-raised-button'">Home</button>
   <button [routerLink]="'playground'" mat-button [routerLinkActive]="'mat-raised-button'">Playground</button>
 </mat-toolbar>
