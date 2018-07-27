@@ -9,7 +9,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatNativeDateModule,
-  MatOptionModule, MatRadioModule, MatSelectModule
+  MatOptionModule, MatRadioModule, MatSelectModule, MatProgressSpinnerModule
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 
@@ -25,7 +25,8 @@ import {FormsModule} from '@angular/forms';
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatProgressSpinnerModule
   ],
   declarations: [PlaygroundComponent],
   exports: [],
