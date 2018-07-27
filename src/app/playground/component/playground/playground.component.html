@@ -2,12 +2,14 @@
   PLAYGROUND - playground works!
 </p>
 
-<mat-checkbox [(ngModel)]="checked">Checked</mat-checkbox>
+<section class="example-section">
+  <mat-checkbox class="full-width" [(ngModel)]="checked">Checked</mat-checkbox>
+</section>
 
 {{checked}}
 
 
-<mat-form-field>
+<mat-form-field class="half-width">
   <input matInput [(ngModel)]="datepicker" [matDatepicker]="picker" placeholder="Choose a date">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
@@ -16,19 +18,19 @@
 {{datepicker}}
 
 
-<mat-form-field>
+<mat-form-field class="full-width">
   <input matInput [(ngModel)]="input1" placeholder="Input">
 </mat-form-field>
 
 {{input1}}
 
-<mat-form-field>
+<mat-form-field class="full-width">
   <textarea matInput [(ngModel)]="textarea1" placeholder="Textarea"></textarea>
 </mat-form-field>
 
 {{textarea1}}
 
-<mat-form-field>
+<mat-form-field class="full-width">
   <mat-select [(ngModel)]="select1" placeholder="Select">
     <mat-option value="option">Option</mat-option>
     <mat-option value="option1">Option 1</mat-option>
@@ -38,10 +40,12 @@
 
 {{select1}}
 
-<mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
-  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-    {{season}}
-  </mat-radio-button>
-</mat-radio-group>
+<section class="example-section">
+  <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+    <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+      {{season}}
+    </mat-radio-button>
+  </mat-radio-group>
+</section>
 
 {{favoriteSeason}}

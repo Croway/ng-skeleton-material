@@ -3,7 +3,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {HomeComponent} from './component/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatIconModule, MatMenuModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatMenuModule, MatSidenavModule, MatToolbarModule, MatTreeModule} from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {CoreRoutingModule} from './core-routing.module';
 import { HeaderComponent } from './component/header/header.component';
@@ -19,7 +19,8 @@ import { PlaygroundComponent } from '../playground/component/playground/playgrou
     CoreRoutingModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatTreeModule
   ],
   declarations: [HomeComponent, HeaderComponent, FooterComponent, MenuComponent],
   exports: [RouterModule, HomeComponent, BrowserAnimationsModule, HeaderComponent, MenuComponent, FooterComponent],
