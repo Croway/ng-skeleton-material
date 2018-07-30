@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomHttpClient } from '../../../core/CustomHttpClient';
 
 @Component({
   selector: 'app-playground',
@@ -14,9 +15,18 @@ export class PlaygroundComponent implements OnInit {
   select1: string;
   favoriteSeason: string;
   seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
-  constructor() { }
+  slider: number;
+  slToggle: boolean;
+  constructor(private http: CustomHttpClient) { }
 
   ngOnInit() {
+  }
+
+  testRest() {
+    this.http.get('http://www.google.com').subscribe({
+      next(result) { console.log('OK: ', result); },
+      error(msg) { console.log('Error: ', msg); }
+    });
   }
 
 }

@@ -1,35 +1,39 @@
-<p>
-  PLAYGROUND - playground works!
-</p>
+<h1 class="mat-display-1">
+  PLAYGROUND
+</h1>
 
-<section class="example-section">
+<h3>Checkbox example</h3>
+<section>
   <mat-checkbox class="full-width" [(ngModel)]="checked">Checked</mat-checkbox>
 </section>
 
-{{checked}}
+<h4>{{checked}}</h4>
 
-<mat-form-field class="half-width">
+<h3>Date example</h3>
+<mat-form-field>
   <input matInput [(ngModel)]="datepicker" [matDatepicker]="picker" placeholder="Choose a date">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
 
-{{datepicker}}
+<h4>{{datepicker}}</h4>
 
-
-<mat-form-field class="full-width">
+<h3>Input example</h3>
+<mat-form-field>
   <input matInput [(ngModel)]="input1" placeholder="Input">
 </mat-form-field>
 
-{{input1}}
+<h4>{{input1}}</h4>
 
-<mat-form-field class="full-width">
+<h3>Textarea example</h3>
+<mat-form-field>
   <textarea matInput [(ngModel)]="textarea1" placeholder="Textarea"></textarea>
 </mat-form-field>
 
-{{textarea1}}
+<h4>{{textarea1}}</h4>
 
-<mat-form-field class="full-width">
+<h3>Select example</h3>
+<mat-form-field>
   <mat-select [(ngModel)]="select1" placeholder="Select">
     <mat-option value="option">Option</mat-option>
     <mat-option value="option1">Option 1</mat-option>
@@ -37,8 +41,9 @@
   </mat-select>
 </mat-form-field>
 
-{{select1}}
+<h4>{{select1}}</h4>
 
+<h3>Radio example</h3>
 <section class="example-section">
   <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
     <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
@@ -47,8 +52,46 @@
   </mat-radio-group>
 </section>
 
-{{favoriteSeason}}
+<h4>{{favoriteSeason}}</h4>
 
-<section>
-  <mat-spinner></mat-spinner>
-</section>
+<h3>Button Error Rest (spinner + dialog)</h3>
+<div class="button-row">
+  <button mat-raised-button color="primary" (click)="testRest()">Test error rest call</button>
+</div>
+
+<h3>Grid example</h3>
+<mat-grid-list cols="2" rowHeight="100px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="First name">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Last name">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Address">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="City">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="State">
+    </mat-form-field>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<h3>Slider example</h3>
+<mat-slider [thumbLabel]="true" [(ngModel)]="slider"></mat-slider>
+{{slider}}
+
+<h3>Slide toggle</h3>
+<mat-slide-toggle [(ngModel)]="slToggle">Slide me!</mat-slide-toggle>
+{{slToggle}}
